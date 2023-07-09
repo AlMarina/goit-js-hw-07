@@ -8,7 +8,10 @@ console.log(galleryItems);
 const listEl = document.querySelector('.gallery');
 listEl.insertAdjacentHTML('beforeend', createMarkUp(galleryItems));
 
-listEl.addEventListener('click', handlerClick);
+const simple = new SimpleLightbox('.gallery__link',
+      {
+        captionData: 'alt',
+        captionDelay: 250}); 
 
 
 function createMarkUp(arr) { 
@@ -28,15 +31,8 @@ function createMarkUp(arr) {
 
 
 
-function handlerClick(evt) { 
-     evt.preventDefault();
-    if (!evt.target.classList.contains("gallery__image"))
-        return;
     
-    const simple = new SimpleLightbox('.gallery__link',
-        {
-            captionData: 'alt',
-        captionDelay: 250});       
-}
+        
+
 
 
