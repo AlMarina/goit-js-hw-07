@@ -18,6 +18,8 @@ function createMarkUp(arr) {
         src="${preview}"
       data-source="${original}"
       alt="${description}"
+      width=1200"
+      height="800"
     />
   </a>
 </li>`).join('');
